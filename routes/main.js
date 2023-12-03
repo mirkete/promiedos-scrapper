@@ -11,7 +11,7 @@ function mainRoutes(){
     })
 
     mainRouter.get("/screenshot", async (req, res) => {
-        const image = await makeScreen("https://www.cuevana-3.id/")
+        const image = await makeScreen("https://www.promiedos.com.ar/")
         
         res.writeHead(200, {
             "Content-Type": "image/jpeg"
