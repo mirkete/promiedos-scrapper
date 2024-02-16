@@ -1,10 +1,16 @@
-import express from "express"
-import { mainRoutes } from "./routes/main.js"
+import express from 'express'
+import { mainRoutes } from './routes/main.js'
+import { matchesUpdater } from './utils/dataUpdater.js'
 
+// Create server
 const app = express()
 
-app.use("/", mainRoutes())
+// Updater
+matchesUpdater()
 
-app.listen(3000, () => {
-    console.log("SERVER ON")
+// Routes
+app.use('/', mainRoutes())
+
+app.listen(3001, () => {
+  console.log('SERVER ON')
 })
